@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 import { GraduationCap, Bell } from 'lucide-react';
 
 export default function Header() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
         <header className="border-bottom shadow-sm bg-white">
@@ -41,39 +40,7 @@ export default function Header() {
                         Đăng nhập
                     </button>
                 </div>
-
-                <button
-                    className="btn d-md-none"
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                >
-                    <i className={`ri-${isMenuOpen ? 'close' : 'menu'}-line fs-5`}></i>
-                </button>
             </div>
-
-            {isMenuOpen && (
-                <div className="d-md-none border-top py-3">
-                    <div className="container d-flex flex-column gap-3">
-                        <NavLink to="/" className={({ isActive }) =>
-                            `text-decoration-none link-dark fw-medium ${isActive ? 'text-primary' : 'hover-text-primary'}`
-                        } >
-                            Trang chủ
-                        </NavLink>
-                        <NavLink to="/favorites" className={({ isActive }) =>
-                            `text-decoration-none link-dark fw-medium ${isActive ? 'text-primary' : 'hover-text-primary'}`
-                        } >
-                            Yêu thích
-                        </NavLink>
-                        <NavLink to="/history" className={({ isActive }) =>
-                            `text-decoration-none link-dark fw-medium ${isActive ? 'text-primary' : 'hover-text-primary'}`
-                        } >
-                            Lịch sử
-                        </NavLink>
-                        <button className="btn btn-primary w-100 mt-2">
-                            Đăng nhập
-                        </button>
-                    </div>
-                </div>
-            )}
         </header>
     );
 }

@@ -10,6 +10,8 @@ import {
 } from "react-router-dom";
 import Header from './components/header';
 import Home from './pages/home';
+import FavoritesPage from './pages/favorite';
+import HistoryPage from './pages/history';
 
 function App() {
 
@@ -26,6 +28,8 @@ function App() {
           <div className="">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/favorites" element={<FavoritesPage />} />
+              <Route path="/history" element={<HistoryPage />} />
               {/* <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/forgot-password" element={<ResetPassword />} /> */}
