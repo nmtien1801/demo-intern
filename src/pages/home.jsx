@@ -6,6 +6,7 @@ import ProductModal from '../components/ProductModal';
 import AISuggestions from '../components/AISuggestions';
 import LoadingSkeleton from '../components/LoadingSkeleton';
 import { fetchCourses } from '../components/fetchCourses'
+import { fetchSuggestions } from '../components/fetchSuggestion'
 
 // const mockCourses = [
 //   {
@@ -143,10 +144,13 @@ export default function Home() {
     setIsLoadingSuggestions(true);
     setShowSuggestions(true);
     await new Promise(r => setTimeout(r, 2000));
-    const suggested = mockCourses
+
+    const dataSuggested = await fetchSuggestions();
+
+    const suggested = dataSuggested
       .filter(c => viewHistory.includes(c.id) || favorites.includes(c.id))
       .slice(0, 3);
-    setFilteredCourses(suggested.length ? suggested : mockCourses.sort(() => 0.5 - Math.random()).slice(0, 3));
+    setFilteredCourses(suggested.length ? suggested : courses.sort(() => 0.5 - Math.random()).slice(0, 3));
     setIsLoadingSuggestions(false);
   };
 
@@ -182,7 +186,7 @@ export default function Home() {
                 <button
                   onClick={() => {
                     setShowSuggestions(false);
-                    setFilteredCourses(mockCourses);
+                    setFilteredCourses(courses);
                   }}
                   className="btn btn-link text-primary fw-medium p-0 text-decoration-none"
                 >
