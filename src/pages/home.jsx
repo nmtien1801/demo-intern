@@ -193,8 +193,8 @@ export default function Home() {
                           <CourseCard
                             course={course}
                             isFavorite={favorites.includes(course.id)}
-                            onClick={() => handleCourseClick(course)}
-                            onToggleFavorite={() => toggleFavorite(course.id)}
+                            onCourseClick={handleCourseClick}
+                            onToggleFavorite={toggleFavorite}
                           />
                         </div>
                       ))}
@@ -211,7 +211,7 @@ export default function Home() {
           course={selectedCourse}
           onClose={() => setSelectedCourse(null)}
           isFavorite={favorites.includes(selectedCourse.id)}
-          onToggleFavorite={() => toggleFavorite(selectedCourse.id)}
+          onToggleFavorite={toggleFavorite}
         />
       )}
     </div>
