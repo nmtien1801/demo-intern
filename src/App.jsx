@@ -9,6 +9,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import Header from './components/header';
+import Home from './pages/home';
 
 function App() {
 
@@ -21,16 +22,11 @@ function App() {
           <Header />
         </div>
 
-        {/* NavbarLeft */}
-        <div className=""
-          style={{ marginTop: "80px" }}>
-
-
-          {/* Nội dung chính */}
+         {/* Nội dung chính */}
           <div className="">
             <Routes>
-              {/* <Route path="/" element={<Login />} />
-              <Route path="/login" element={<Login />} />
+              <Route path="/" element={<Home />} />
+              {/* <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/forgot-password" element={<ResetPassword />} /> */}
 
@@ -38,7 +34,6 @@ function App() {
 
             </Routes>
           </div>
-        </div>
       </div>
 
       {/* <ToastContainer
