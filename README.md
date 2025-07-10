@@ -1,12 +1,31 @@
-# React + Vite
+## Running Tests
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+To run tests, run the following command
 
-Currently, two official plugins are available:
+```bash
+  npm i
+  npm run dev
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Screenshots
 
-## Expanding the ESLint configuration
+*Hình 1: Màn hình Trang chủ với các chức năng tìm kiếm theo tên, giá và danh mục.*
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<img src="https://github.com/nmtien1801/Fontend_Fullstack_SERN/blob/master/src/assets/image/trangChu.png?raw=true" alt="home" width="300"/>
+
+*Hình 2: Màn hình yêu thích với khi người dùng bấm tim.*
+
+<img src="https://github.com/nmtien1801/Fontend_Fullstack_SERN/blob/master/src/assets/image/yeuThich.png?raw=true" alt="favorite" width="300"/>
+
+*Hình 3: Màn hình lịch sử đã xem với các khóa học khi người dùng bấm xem chi tiết.*
+
+<img src="https://github.com/nmtien1801/Fontend_Fullstack_SERN/blob/master/src/assets/image/lichSuXem.png?raw=true" alt="history" width="300"/>
+
+*Hình 4: Chức năng gợi ý AI giúp người dùng thấy được các khóa học dựa theo yêu thích và lịch sử xem.*
+
+<img src="https://github.com/nmtien1801/Fontend_Fullstack_SERN/blob/master/src/assets/image/suggestionAI.png?raw=true" alt="suggestion" width="300"/>
+
+*Hình 5: Chức năng xem chi tiết sản phẩm khóa học.*
+
+<img src="https://github.com/nmtien1801/Fontend_Fullstack_SERN/blob/master/src/assets/image/detailCourse.png?raw=true" alt="detail" width="300"/>v
+
